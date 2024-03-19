@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function AddContactForm() {
+function AddContactForm({ onContactAdded }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [address, setAddress] = useState('');
@@ -23,6 +23,7 @@ function AddContactForm() {
             setName('');
             setEmail('');
             setAddress('');
+            onContactAdded();
         })
         .catch((e) => {
             console.error("Error: ", e)
