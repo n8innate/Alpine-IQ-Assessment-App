@@ -21,6 +21,18 @@ app.get('/contacts', async (req, res) => {
     }
 });
 
+app.post('/contacts', async (req, res) => {
+    try {
+        const newContact = await Contact.create(req.body);
+        res.status(201).json(newContact);
+        
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Server Error');
+    }
+
+});
+
 // Start the Server...
 app.listen(port, () => {
     console.log(`Server running on port ${port}...`)
