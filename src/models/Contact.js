@@ -11,7 +11,7 @@ const Contact = {
             'INSERT INTO contacts (name, email, address) VALUES ($1, $2, $3) RETURNING *',
             [name, email, address]
         );
-        return rows;
+        return rows[0];
     },
 }
 
