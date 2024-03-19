@@ -1,0 +1,19 @@
+{
+  "name": "alpine-iq-assessment-app",
+  "version": "1.0.0",
+  "description": "A simple directory app for contacts.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n8innate/Alpine-IQ-Assessment-App.git"
+  },
+  "author": "n8innate",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n8innate/Alpine-IQ-Assessment-App/issues"
+  },
+  "homepage": "https://github.com/n8innate/Alpine-IQ-Assessment-App#readme"
+}
