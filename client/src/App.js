@@ -19,7 +19,7 @@ function App() {
     return (
         <div>
             <h1>Contact Directory</h1>
-            <AddContactForm contacts={contacts} onContactAdded={fetchContacts} />
+            <AddContactForm onContactAdded={fetchContacts} />
             <ContactsList contacts={contacts} />
         </div>
     );
