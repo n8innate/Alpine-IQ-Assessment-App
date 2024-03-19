@@ -6,7 +6,7 @@ function AddContactForm({ onContactAdded }) {
     const [address, setAddress] = useState('');
 
     // Fetch Request to POST new Contacts 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         e.preventDefault();
 
         const contact = { name, email, address };
