@@ -41,13 +41,15 @@ function AddContactForm({ onContactAdded, contacts }) {
     }
     
     return (
-        <form onSubmit={handleSubmit}>
-            <div>
-                <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required/>
-            </div>
-            <div>
-                <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
-                { error && <div style={{color:"red"}}>{error}</div> }
+        <form onSubmit={handleSubmit} className="contact-form">
+            <div className="input-group">
+                <div>
+                    <input type="text" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} required/>
+                </div>
+                <div>
+                    <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required/>
+                    { error && <div style={{color:"red"}}>{error}</div> }
+                </div>
             </div>
             <textarea placeholder="Address" value={address} onChange={(e) => setAddress(e.target.value)}></textarea>
             <button type="submit">Add Contact</button>

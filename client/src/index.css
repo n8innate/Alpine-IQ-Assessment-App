@@ -1,13 +1,81 @@
-body {
+body, html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root, .App {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.App {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: fit-content;
+  min-width: 300px; /* Adjust based on your content size */
+}
+
+input, textarea, button {
+  margin: 10px 0; /* Spacing around form elements */
+  padding: 8px;
+  width: 90%; /* Make form elements take up most of the container width */
+  max-width: 250px; /* Limiting max width of form elements */
+}
+
+button {
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+input, textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  text-align: left;
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-group {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.input-group input {
+  flex: 1; /* Allows "name" and "email" inputs to take equal space */
+  margin: 5px; /* Adjust spacing between the inputs */
+}
+
+.contact-form textarea {
+  width: calc(100% - 12px); /* Adjust based on the total width of the input group, accounting for margins */
+  margin: 5px 0; /* Spacing above and below the textarea */
+}
+
+.contact-form button {
+  margin-top: 20px; /* Adds spacing above the submit button */
 }
